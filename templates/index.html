@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Thyroid Disease Prediction</title>
+   <link rel="stylesheet" href="../static/styles/style.css">
+</head>
+
+<body>
+   <center>
+      <br><br>
+      <h1> Thyroid Disease Prediction</h1>
+      <p>This web application is made to predict Thyroid Disease with the given parameter below</p>
+      <p> Fill the parameters and get your Results.</p>
+      <br>
+      <form class="form-inline" action="/prediction" method='POST'>
+         <label color=for="TSH">TSH Value</label>
+         <input class="form-control" type="number" step="any" name="TSH">
+
+         <label for="FTI">FTI Value</label>
+         <input class="form-control" type="number" step="any" name="FTI">
+
+         <label for="TT4"> TT4 Value</label>
+         <input class="form-control" type="number" step="any" name="TT4">
+
+         <label for="T3"> T3 Value</label>
+         <input class="form-control" type="number" step="any" name="T3"><br><br><br>
+       <div class="sec1">
+         <label for="query_hypothyroid"> Query_hypothyroid</label>
+         <select class="input100" id="query_hypothyroid" name="query_hypothyroid"
+            style="padding: 1px 5px;margin-top: 15px;border: 2px solid #d9d9d9;">
+            <option value="number">Select</option>
+            <option value="1">True</option>
+            <option value="0">False</option>
+         </select>
+
+         <label for="on_thyroxine"> Query_thyroxine</label>
+         <select class="input100" id="on_thyroxine" name="on_thyroxine">
+            <option value="number">Select</option>
+            <option value="1">True</option>
+            <option value="0">False</option>
+         </select style="width: 10px">
+
+         <label for="sex"> Sex</label>
+         <select class="input100" id="sex" name="sex">
+            <option value="number">Select</option>
+            <option value="0">Female</option>
+            <option value="1">Male</option>
+         </select>
+
+         <label for="psych"> Psych</label>
+         <select class="input100" id="psych" name="psych">
+            <option value="number">Select</option>
+            <option value="1">True</option>
+            <option value="0">False</option>
+         </select>
+
+         <label for="pregnant"> Pregnant</label>
+         <select class="input100" id="pregnant" name="pregnant">
+            <option value="number">Select</option>
+            <option value="1">True</option>
+            <option value="0">False</option>
+         </select>
+      </div>
+         <br><br <br><br>
+
+         <p> Fill all values, Click "Predict" for prediction on your
+            values</p>
+         <div>
+            <input class="btn" type="submit" value="Predict" style="margin-left:30px;">
+            <input  class="btn1" type="reset" value="Reset value" style="margin-left:30px;">
+         </div>
+      </form>
+   </center>
+</body>
+
+</html>
